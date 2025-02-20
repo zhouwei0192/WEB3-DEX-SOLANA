@@ -27,7 +27,7 @@ pub struct SplTokenSwapAccounts<'info> {
     pub pool_fee: InterfaceAccount<'info, TokenAccount>,
     pub token_program: Program<'info, Token>,
 }
-const ACCOUNTS_LEN: usize = 11;
+pub const ACCOUNTS_LEN: usize = 11;
 
 impl<'info> SplTokenSwapAccounts<'info> {
     fn parse_accounts(accounts: &'info [AccountInfo<'info>], offset: usize) -> Result<Self> {

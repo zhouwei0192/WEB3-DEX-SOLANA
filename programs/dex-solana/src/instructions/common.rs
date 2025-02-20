@@ -414,3 +414,36 @@ fn excute_swap<'a>(
         proxy_swap,
     )
 }
+
+fn dex_account_len<'a>(
+    dex: &Dex
+) -> Result<usize> {
+    let account_len = match dex {
+        Dex::SplTokenSwap => spl_token_swap::ACCOUNTS_LEN,
+        Dex::StableSwap => stable_swap::ACCOUNTS_LEN,
+        Dex::Whirlpool => whirlpool::ACCOUNTS_LEN,
+        Dex::MeteoraDynamicpool => meteora::ACCOUNTS_LEN,
+        Dex::RaydiumSwap => raydium::ACCOUNTS_LEN,
+        Dex::RaydiumStableSwap => raydium::STABLE_ACCOUNTS_LEN,
+        Dex::RaydiumClmmSwap => raydium::CLMM_ACCOUNTS_LEN,
+        Dex::RaydiumClmmSwapV2 => raydium::CLMM_V2_ACCOUNTS_LEN,
+        Dex::AldrinExchangeV1 => aldrin::V1_ACCOUNTS_LEN,
+        Dex::AldrinExchangeV2 => aldrin::V2_ACCOUNTS_LEN,
+        Dex::LifinityV1 => lifinity::ACCOUNTS_LEN,
+        Dex::LifinityV2 => lifinity::ACCOUNTS_LEN,
+        Dex::FluxBeam => fluxbeam::ACCOUNTS_LEN,
+        Dex::MeteoraDlmm => meteora::DLMM_ACCOUNTS_LEN,
+        Dex::RaydiumCpmmSwap => raydium::CPMM_ACCOUNTS_LEN,
+        Dex::OpenBookV2 => openbookv2::ACCOUNTS_LEN,
+        Dex::WhirlpoolV2 => whirlpool::ACCOUNTS_V2_LEN,
+        Dex::Phoenix => phoenix::ACCOUNTS_LEN,
+        Dex::ObricV2 => obric_v2::ACCOUNTS_LEN,
+        Dex::SanctumAddLiq => 0,
+        Dex::SanctumRemoveLiq => 0,
+        Dex::SanctumNonWsolSwap => 0,
+        Dex::SanctumWsolSwap => 0,
+        Dex::PumpfunBuy => pumpfun::BUY_ACCOUNTS_LEN,
+        Dex::PumpfunSell => pumpfun::SELL_ACCOUNTS_LEN,
+    };
+    Ok(account_len)
+}

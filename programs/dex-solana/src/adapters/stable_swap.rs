@@ -26,7 +26,7 @@ pub struct StableSwapAccounts<'info> {
     pub swap_admin_fee: InterfaceAccount<'info, TokenAccount>,
     pub token_program: Program<'info, Token>,
 }
-const ACCOUNTS_LEN: usize = 10;
+pub const ACCOUNTS_LEN: usize = 10;
 
 impl<'info> StableSwapAccounts<'info> {
     fn parse_accounts(accounts: &'info [AccountInfo<'info>], offset: usize) -> Result<Self> {

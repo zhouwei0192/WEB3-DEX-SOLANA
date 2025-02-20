@@ -47,7 +47,7 @@ pub struct LifinitySwapAccountsV2<'info> {
     pub oracle_pc_account: &'info AccountInfo<'info>,
     pub token_program: Program<'info, Token>,
 }
-const ACCOUNTS_LEN: usize = 14;
+pub const ACCOUNTS_LEN: usize = 14;
 
 impl<'info> LifinitySwapAccountsV1<'info> {
     fn parse_accounts(accounts: &'info [AccountInfo<'info>], offset: usize) -> Result<Self> {

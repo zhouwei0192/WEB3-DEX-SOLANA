@@ -38,7 +38,7 @@ pub struct RaydiumSwapAccounts<'info> {
     pub serum_pc_vault_account: Box<InterfaceAccount<'info, TokenAccount>>,
     pub serum_vault_signer: &'info AccountInfo<'info>,
 }
-const ACCOUNTS_LEN: usize = 19;
+pub const ACCOUNTS_LEN: usize = 19;
 
 pub struct RaydiumStableAccounts<'info> {
     pub dex_program_id: &'info AccountInfo<'info>,
@@ -62,7 +62,7 @@ pub struct RaydiumStableAccounts<'info> {
     pub serum_pc_vault_account: Box<InterfaceAccount<'info, TokenAccount>>,
     pub serum_vault_signer: &'info AccountInfo<'info>,
 }
-const STABLE_ACCOUNTS_LEN: usize = 19;
+pub const STABLE_ACCOUNTS_LEN: usize = 19;
 
 pub struct RaydiumClmmAccounts<'info> {
     pub dex_program_id: &'info AccountInfo<'info>,
@@ -81,7 +81,7 @@ pub struct RaydiumClmmAccounts<'info> {
     pub tick_array2: &'info AccountInfo<'info>,
     pub token_program: Program<'info, Token>,
 }
-const CLMM_ACCOUNTS_LEN: usize = 14;
+pub const CLMM_ACCOUNTS_LEN: usize = 14;
 
 pub struct RaydiumClmmV2Accounts<'info> {
     pub dex_program_id: &'info AccountInfo<'info>,
@@ -104,7 +104,7 @@ pub struct RaydiumClmmV2Accounts<'info> {
     pub tick_array1: &'info AccountInfo<'info>,
     pub tick_array2: &'info AccountInfo<'info>,
 }
-const CLMM_V2_ACCOUNTS_LEN: usize = 18;
+pub const CLMM_V2_ACCOUNTS_LEN: usize = 18;
 
 pub struct RaydiumCpmmAccounts<'info> {
     pub dex_program_id: &'info AccountInfo<'info>,
@@ -123,7 +123,7 @@ pub struct RaydiumCpmmAccounts<'info> {
     pub output_token_mint: InterfaceAccount<'info, Mint>,
     pub observation_state: &'info AccountInfo<'info>,
 }
-const CPMM_ACCOUNTS_LEN: usize = 14;
+pub const CPMM_ACCOUNTS_LEN: usize = 14;
 
 impl<'info> RaydiumSwapAccounts<'info> {
     fn parse_accounts(accounts: &'info [AccountInfo<'info>], offset: usize) -> Result<Self> {

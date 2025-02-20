@@ -30,7 +30,7 @@ pub struct ObricV2Account<'info> {
     pub y_price_feed: &'info AccountInfo<'info>,
     pub token_program: Program<'info, Token>,
 }
-const ACCOUNTS_LEN: usize = 13;
+pub const ACCOUNTS_LEN: usize = 13;
 
 impl<'info> ObricV2Account<'info> {
     fn parse_accounts(accounts: &'info [AccountInfo<'info>], offset: usize) -> Result<Self> {

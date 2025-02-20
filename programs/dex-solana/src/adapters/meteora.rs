@@ -34,7 +34,7 @@ pub struct MeteoraDynamicPoolAccounts<'info> {
     pub vault_program: &'info AccountInfo<'info>,
     pub token_program: Program<'info, Token>,
 }
-const ACCOUNTS_LEN: usize = 16;
+pub const ACCOUNTS_LEN: usize = 16;
 
 pub struct MeteoraDlmmAccounts<'info> {
     pub dex_program_id: &'info AccountInfo<'info>,
@@ -57,7 +57,7 @@ pub struct MeteoraDlmmAccounts<'info> {
     pub bin_array1: &'info AccountInfo<'info>,
     pub bin_array2: &'info AccountInfo<'info>,
 }
-const DLMM_ACCOUNTS_LEN: usize = 18;
+pub const DLMM_ACCOUNTS_LEN: usize = 18;
 
 impl<'info> MeteoraDynamicPoolAccounts<'info> {
     fn parse_accounts(accounts: &'info [AccountInfo<'info>], offset: usize) -> Result<Self> {

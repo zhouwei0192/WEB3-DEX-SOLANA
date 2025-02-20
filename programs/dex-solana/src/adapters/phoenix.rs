@@ -26,7 +26,7 @@ pub struct SwapAccounts<'info> {
     pub quote_vault: InterfaceAccount<'info, TokenAccount>,
     pub token_program: Program<'info, Token>,
 }
-const ACCOUNTS_LEN: usize = 9;
+pub const ACCOUNTS_LEN: usize = 9;
 
 impl<'info> SwapAccounts<'info> {
     fn parse_accounts(accounts: &'info [AccountInfo<'info>], offset: usize) -> Result<Self> {

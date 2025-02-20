@@ -45,7 +45,7 @@ pub struct PlaceTakeOrderAccounts<'info> {
     pub open_orders_account1: &'info AccountInfo<'info>,
     pub open_orders_account2: &'info AccountInfo<'info>,
 }
-const ACCOUNTS_LEN: usize = 19;
+pub const ACCOUNTS_LEN: usize = 19;
 
 impl<'info> PlaceTakeOrderAccounts<'info> {
     fn parse_accounts(accounts: &'info [AccountInfo<'info>], offset: usize) -> Result<Self> {

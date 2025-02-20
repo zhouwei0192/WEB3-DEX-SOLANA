@@ -29,7 +29,7 @@ pub struct WhirlpoolAccounts<'info> {
     pub tick_array2: &'info AccountInfo<'info>,
     pub oracle: &'info AccountInfo<'info>,
 }
-const ACCOUNTS_LEN: usize = 12;
+pub const ACCOUNTS_LEN: usize = 12;
 
 pub struct WhirlpoolV2Accounts<'info> {
     pub dex_program_id: &'info AccountInfo<'info>,
@@ -50,7 +50,7 @@ pub struct WhirlpoolV2Accounts<'info> {
     pub tick_array2: &'info AccountInfo<'info>,
     pub oracle: &'info AccountInfo<'info>,
 }
-const ACCOUNTS_V2_LEN: usize = 16;
+pub const ACCOUNTS_V2_LEN: usize = 16;
 
 impl<'info> WhirlpoolAccounts<'info> {
     fn parse_accounts(accounts: &'info [AccountInfo<'info>], offset: usize) -> Result<Self> {

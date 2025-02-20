@@ -37,7 +37,7 @@ pub struct AldrinSwapAccountsV1<'info> {
     pub pool_fee_account: InterfaceAccount<'info, TokenAccount>,
     pub token_program: Program<'info, Token>,
 }
-const V1_ACCOUNTS_LEN: usize = 11;
+pub const V1_ACCOUNTS_LEN: usize = 11;
 
 pub struct AldrinSwapAccountsV2<'info> {
     pub dex_program_id: &'info AccountInfo<'info>,
@@ -54,7 +54,7 @@ pub struct AldrinSwapAccountsV2<'info> {
     pub pool_curve: &'info AccountInfo<'info>,
     pub token_program: Program<'info, Token>,
 }
-const V2_ACCOUNTS_LEN: usize = 12;
+pub const V2_ACCOUNTS_LEN: usize = 12;
 
 impl<'info> AldrinSwapAccountsV1<'info> {
     fn parse_accounts(accounts: &'info [AccountInfo<'info>], offset: usize) -> Result<Self> {

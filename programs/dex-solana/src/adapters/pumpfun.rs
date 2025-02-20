@@ -79,7 +79,7 @@ pub struct PumpfunBuyAccounts<'info> {
     pub event_authority: &'info AccountInfo<'info>,
 }
 
-const BUY_ACCOUNTS_LEN: usize = 13;
+pub const BUY_ACCOUNTS_LEN: usize = 13;
 
 
 pub struct PumpfunBuyProcessor;
@@ -297,7 +297,7 @@ pub struct PumpfunSellAccounts<'info> {
     
 }
 
-const SELL_ACCOUNTS_LEN: usize = 13;
+pub const SELL_ACCOUNTS_LEN: usize = 13;
 
 impl<'info> PumpfunSellAccounts<'info> {
     fn parse_accounts(accounts: &'info [AccountInfo<'info>], offset: usize) -> Result<Self> {

@@ -31,7 +31,7 @@ pub struct FluxBeamAccounts<'info> {
     pub destination_token_program: &'info AccountInfo<'info>,
     pub token_program_2022: Program<'info, Token2022>,
 }
-const ACCOUNTS_LEN: usize = 15;
+pub const ACCOUNTS_LEN: usize = 15;
 
 impl<'info> FluxBeamAccounts<'info> {
     fn parse_accounts(accounts: &'info [AccountInfo<'info>], offset: usize) -> Result<Self> {
