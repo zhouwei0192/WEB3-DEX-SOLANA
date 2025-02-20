@@ -415,7 +415,7 @@ fn excute_swap<'a>(
     )
 }
 
-fn dex_account_len<'a>(
+pub fn get_dex_account_len<'a>(
     dex: &Dex
 ) -> Result<usize> {
     let account_len = match dex {
